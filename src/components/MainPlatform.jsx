@@ -1,15 +1,65 @@
 import React from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const MainPlatform = ({ filters = { state: '', modes: [] } }) => {
   const stateLabel = filters?.state && filters.state.length > 0 ? filters.state : 'All India';
   const modesLabel = (filters?.modes?.length ?? 0) === 0
     ? 'No modes selected'
     : (filters.modes.includes('All') ? 'All transportation modes' : filters.modes.join(', '));
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      const q = gsap.utils.selector(sectionRef);
+      gsap.from(q('.platform-heading'), {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 85%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
+      });
+      gsap.from(q('.platform-card'), {
+        y: 18,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
+      });
+      gsap.from(q('.platform-map'), {
+        y: 24,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
+      });
+      gsap.from(q('.platform-left > div'), {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
+      });
+      gsap.from(q('.platform-right > div'), {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="py-20 px-6 md:px-20 bg-[#F8F9FA]"> {/* Light gray background */}
+    <section ref={sectionRef} className="py-20 px-6 md:px-20 bg-[#F8F9FA]"> {/* Light gray background */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">
+        <h2 className="platform-heading text-3xl md:text-4xl font-bold text-center text-gray-800">
           Real-time Intelligence At Your Fingertips
         </h2>
         <p className="mt-4 text-center text-gray-600 max-w-2xl mx-auto">
@@ -17,7 +67,7 @@ const MainPlatform = ({ filters = { state: '', modes: [] } }) => {
         </p>
 
         {/* Active Filters Card */}
-        <div className="mt-8 max-w-3xl mx-auto">
+        <div className="platform-card mt-8 max-w-3xl mx-auto">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white border border-gray-200 rounded-lg shadow p-4">
             <div>
               <div className="text-sm text-gray-500">Active Filters</div>
@@ -36,7 +86,7 @@ const MainPlatform = ({ filters = { state: '', modes: [] } }) => {
 
         <div className="mt-12 flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
           {/* Left Panel */}
-          <div className="lg:w-1/4 space-y-4">
+          <div className="platform-left lg:w-1/4 space-y-4">
             <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
               <h3 className="font-semibold text-lg text-gray-800">Live Infrastructure Monitoring</h3>
               <p className="text-sm text-gray-600 mt-2">Real-time tracking of hydrogen assets with automated alerts and performance metrics.</p>
@@ -53,9 +103,19 @@ const MainPlatform = ({ filters = { state: '', modes: [] } }) => {
 
           {/* Map and Dashboard Section */}
           <div className="lg:w-1/2 relative">
-            <div className="p-4 bg-white rounded-lg shadow-lg h-full border border-gray-200">
-              {/* Map Placeholder */}
-              <img src="https://i.imgur.com/k6lPq5G.jpg" alt="Hydrogen Map" className="w-full h-auto rounded-lg" />
+            <div className="platform-map p-4 bg-white rounded-lg shadow-lg h-full border border-gray-200 relative">
+              {/* Embedded Map */}
+              <div className="w-full h-80 md:h-[28rem] rounded-lg overflow-hidden">
+                <iframe
+                  title="India Map"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=68.0%2C6.0%2C98.0%2C38.0&layer=mapnik"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
               
               {/* Floating Layer Panel */}
               <div className="absolute top-8 left-8 bg-white p-4 rounded-lg shadow-md border border-gray-200">
@@ -101,7 +161,7 @@ const MainPlatform = ({ filters = { state: '', modes: [] } }) => {
           </div>
 
           {/* Right Panel */}
-          <div className="lg:w-1/4 space-y-4">
+          <div className="platform-right lg:w-1/4 space-y-4">
             <div className="p-6 bg-white rounded-lg shadow-lg border border-gray-200">
               <h3 className="font-semibold text-lg text-gray-800">Spatial Query & Analysis Tools</h3>
               <p className="text-sm text-gray-600 mt-2">Advanced geospatial analysis for site selection and route optimization.</p>

@@ -3,8 +3,9 @@
 
 const ENDPOINTS = [
   'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass-api.nextzen.org/api/interpreter',
   'https://overpass-api.de/api/interpreter',
+  'https://lz4.overpass-api.de/api/interpreter',
+  'https://overpass.openstreetmap.fr/api/interpreter',
 ];
 
 // In-memory cache: key -> { ts, data }
@@ -59,7 +60,7 @@ function buildQuery(lat, lon, radiusKm, modes) {
     blocks.push(`nwr(around:${R},${lat},${lon})[harbour];
       nwr(around:${R},${lat},${lon})[landuse=harbour];
       nwr(around:${R},${lat},${lon})["seamark:type"="harbour"];
-      nwr(around:${R},${lat},${lon})[seamark:harbour];
+      nwr(around:${R},${lat},${lon})["seamark:harbour"];
       nwr(around:${R},${lat},${lon})[man_made=pier];
       nwr(around:${R},${lat},${lon})[amenity=ferry_terminal];`);
   }
@@ -70,7 +71,7 @@ function buildQuery(lat, lon, radiusKm, modes) {
     (
       ${blocks.join('\n')}
     );
-    out center 200;
+    out center;
   `;
 }
 
@@ -89,14 +90,25 @@ function categorizeElement(el) {
   const isWater = tags.amenity === 'ferry_terminal' || 'waterway' in tags;
   const isMetro = tags.railway === 'subway_entrance' || tags.station === 'subway';
   const isPipe = tags.man_made === 'pipeline';
-  const isSea = ('harbour' in tags) || tags.landuse === 'harbour' || tags['seamark:type'] === 'harbour' || ('seamark:harbour' in tags) || (Object.keys(tags).some(k => k.startsWith('seamark:harbour')));
+  const isSea = (
+    ('harbour' in tags) ||
+    tags.landuse === 'harbour' ||
+    tags['seamark:type'] === 'harbour' ||
+    ('seamark:harbour' in tags) ||
+    Object.keys(tags).some(k => k.startsWith('seamark:harbour')) ||
+    tags.man_made === 'pier' ||
+    tags.amenity === 'ferry_terminal'
+  );
 
   // Prefer ref for highways (e.g., NH10), otherwise use name; per mode fallbacks
   const getDisplayName = () => {
-    if (isRoad && 'highway' in tags) return (
-      tags.ref || tags.nat_ref || tags.int_ref || tags['ref:IN'] ||
-      tags.name || tags['official_name'] || tags['name:en'] || tags.short_name || ''
-    );
+    if (isRoad && 'highway' in tags) {
+      const label = (
+        tags.ref || tags.nat_ref || tags.int_ref || tags['ref:IN'] ||
+        tags.name || tags['official_name'] || tags['name:en'] || tags.short_name || ''
+      );
+      return label || (tags.highway ? `Highway (${tags.highway})` : 'Highway');
+    }
     if (isRail) return tags.name || tags.ref || '';
     if (isAir) return tags.name || tags.ref || tags.iata || tags.icao || '';
     if (isWater) return tags.name || '';
@@ -213,7 +225,7 @@ function buildPOIQuery(lat, lon, radiusKm, modes) {
     blocks.push(`nwr(around:${R},${lat},${lon})[harbour];
       nwr(around:${R},${lat},${lon})[landuse=harbour];
       nwr(around:${R},${lat},${lon})["seamark:type"="harbour"];
-      nwr(around:${R},${lat},${lon})[seamark:harbour];
+      nwr(around:${R},${lat},${lon})["seamark:harbour"];
       nwr(around:${R},${lat},${lon})[man_made=pier];
       nwr(around:${R},${lat},${lon})[amenity=ferry_terminal];`);
   }
@@ -223,7 +235,7 @@ function buildPOIQuery(lat, lon, radiusKm, modes) {
     (
       ${blocks.join('\n')}
     );
-    out center 200;
+    out center;
   `;
 }
 

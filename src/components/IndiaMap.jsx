@@ -92,7 +92,7 @@ const toPointFeatureCollection = (geojson) => {
 };
 
 // Main map component
-export default function IndiaMap({ selectedState, layers = [], modes = [], onNearest }) {
+export default function IndiaMap({ selectedState, layers = [], modes = [], heatmap, onNearest }) {
   const location = INDIA_LOCATIONS[selectedState] || INDIA_LOCATIONS["All India"];
   const stateCenter = useMemo(() => [location.lat, location.lng], [selectedState]);
   
@@ -159,6 +159,21 @@ export default function IndiaMap({ selectedState, layers = [], modes = [], onNea
       weight: 1,
       opacity: 1,
       fillOpacity: 0.85,
+    };
+  };
+
+  // Style for suitability heatmap polygons
+  const getHeatmapStyle = (feature) => {
+    const cat = feature?.properties?.category;
+    let fillColor = "#ef4444"; // Low -> red
+    if (cat === "average") fillColor = "#f59e0b"; // Average -> amber
+    if (cat === "high") fillColor = "#10b981"; // High -> emerald
+    return {
+      color: "transparent",
+      weight: 0,
+      fillColor,
+      fillOpacity: 0.28,
+      interactive: false,
     };
   };
 
@@ -264,6 +279,25 @@ export default function IndiaMap({ selectedState, layers = [], modes = [], onNea
       <Pane name="plants-pane" style={{ zIndex: 403 }} />
       <Pane name="hydrogen-pane" style={{ zIndex: 404 }} />
       <Pane name="transport-pane" style={{ zIndex: 450 }} />
+      <Pane name="heatmap-pane" style={{ zIndex: 390 }} />
+
+      {/* Hydrogen suitability heatmap (rendered underneath using its own pane) */}
+      {heatmap && Array.isArray(heatmap.features) && heatmap.features.length > 0 && (
+        <GeoJSON
+          key={`heatmap-${selectedState}-${heatmap.features.length}`}
+          data={heatmap}
+          pane="heatmap-pane"
+          style={getHeatmapStyle}
+          onEachFeature={(feature, layer) => {
+            try {
+              const p = feature?.properties || {};
+              const pct = typeof p.score === 'number' ? `${Math.round(p.score * 100)}%` : '';
+              const label = `${p.category ? p.category : 'Suitability'}${pct ? ` · ${pct}` : ''}`;
+              layer.bindTooltip(label, { sticky: false, opacity: 0.7 });
+            } catch {}
+          }}
+        />
+      )}
 
       {layers.map((layer) => {
         if (!layer.data) return null;
@@ -280,7 +314,7 @@ export default function IndiaMap({ selectedState, layers = [], modes = [], onNea
         const paneName = layer.name === "plants" ? "plants-pane" : layer.name === "hydrogen" ? "hydrogen-pane" : "demands-pane";
         return (
           <GeoJSON
-            key={`${layer.name}-${selectedState}`}
+            key={`${layer.name}-${selectedState}-${[...modes].sort().join('|')}`}
             data={dataAsPoints}
             pane={paneName}
             pointToLayer={(feature, latlng) => L.circleMarker(latlng, styleFunction(feature))}

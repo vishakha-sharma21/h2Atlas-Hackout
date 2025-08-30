@@ -2,7 +2,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import IndiaMap from './IndiaMap.jsx';
-import { ALL_MODES } from '../utils/overpass.js';
 
 const INDIA_STATES = [
   'All India',
@@ -79,7 +78,7 @@ export default function Preferences() {
   // Map layer visibility: default all ON as requested
   const [visibleLayers, setVisibleLayers] = useState({ demands: true, plants: true, hydrogen: true });
   const [selectedStats, setSelectedStats] = useState([]);
-  const [nearestSummary, setNearestSummary] = useState(null);
+  // Heatmap removed from Preferences; see Site Selection page for scoring overlays
 
   // Always start at All India to show pan-India data by default
   useEffect(() => {
@@ -119,15 +118,10 @@ export default function Preferences() {
     e.preventDefault();
     const payload = { state: stateVal === 'All India' ? '' : stateVal, modes };
     localStorage.setItem('h2_filters', JSON.stringify(payload));
-    navigate('/');
+    // Stay on the same page (no redirect)
   };
 
-  // Modes to display for nearest transport summary
-  const displayModes = useMemo(() => (
-    modes.includes('All') || modes.length === 0
-      ? ALL_MODES
-      : ALL_MODES.filter(m => modes.includes(m))
-  ), [modes]);
+  // Removed nearest transport summary above the map (duplicate of popup content)
 
   // New: fetch GeoJSON layers once
   useEffect(() => {
@@ -218,10 +212,18 @@ export default function Preferences() {
     } catch {}
   }, [filteredLayers, stateVal]);
 
+  // Heatmap generation removed from Preferences; see Site Selection page
+
   const saveFilters = () => {
     const payload = { state: stateVal === 'All India' ? '' : stateVal, modes };
     localStorage.setItem('h2_filters', JSON.stringify(payload));
   };
+
+  // Auto-save filters whenever state or modes change
+  useEffect(() => {
+    const payload = { state: stateVal === 'All India' ? '' : stateVal, modes };
+    try { localStorage.setItem('h2_filters', JSON.stringify(payload)); } catch {}
+  }, [stateVal, modes]);
 
   const onViewReport = () => {
     saveFilters();
@@ -314,29 +316,13 @@ export default function Preferences() {
                   </label>
                 ))}
               </div>
-              <div className="mt-2 text-sm text-gray-700">
-                <div className="font-medium">Nearest transport (last clicked):</div>
-                {nearestSummary ? (
-                  <div>
-                    {displayModes.map(mode => {
-                      const s = nearestSummary[mode] || {};
-                      const dist = Number.isFinite(s.nearestKm) ? `${s.nearestKm.toFixed(1)} km` : '';
-                      const label = s.nearestName || '';
-                      return (
-                        <div key={mode}><b>{mode}:</b> {label ? `${label} — ${dist}` : '—'}</div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div>Click a marker on the map to load nearest stations.</div>
-                )}
-              </div>
+              {/* Removed nearest transport summary above the map */}
             </div>
 
             {/* Map with simple stats beside it (70/30 split on md+) */}
             <div className="grid grid-cols-1 md:grid-cols-10 gap-6 items-start">
               <div className="md:col-span-7 border border-gray-200 rounded-md overflow-hidden relative z-0">
-                <IndiaMap selectedState={stateVal} layers={visibleFilteredLayers} modes={modes} onNearest={setNearestSummary} />
+                <IndiaMap selectedState={stateVal} layers={visibleFilteredLayers} modes={modes} />
               </div>
               <div className="md:col-span-3">
                 {/* Layer visibility controls */}
@@ -379,7 +365,7 @@ export default function Preferences() {
                     </div>
                   ))}
                 </div>
-                {/* Each checkbox now shows its data directly below it */}
+                {/* Hydrogen heatmap controls removed from Preferences */}
               </div>
             </div>
 
@@ -394,6 +380,12 @@ export default function Preferences() {
             <div className="pt-4 border-t border-gray-200 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-end">
               <button type="button" onClick={onViewReport} className="px-5 py-2 rounded-md bg-[#4A90E2] hover:bg-[#3A7EDC] text-white font-medium shadow">View Document</button>
               <button type="button" onClick={onDownloadPDF} className="px-5 py-2 rounded-md bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-medium shadow">Download PDF</button>
+            </div>
+
+            {/* Predict entry point at bottom */}
+            <div className="pt-4 border-t border-gray-200 flex items-center justify-between">
+              <div className="text-sm text-gray-600">Changes apply immediately to the map. Saving keeps your choices for later.</div>
+              <button type="button" onClick={()=>navigate('/predict')} className="px-5 py-2 rounded-md bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-medium shadow">Open Predict</button>
             </div>
           </form>
         </div>
