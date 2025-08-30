@@ -1,12 +1,88 @@
-# React + Vite
+h2Atlas-Hackout
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **React project** built with **Vite**, styled using **Tailwind CSS**, and designed for mapping and visualization.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project Structure
 
-## Expanding the ESLint configuration
+The repository is structured as follows:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+.
+├── public/                  # Static assets
+│   ├── final_hydrogen_plants.geojson
+│   ├── india_solar_wind.geojson
+│   ├── major_industrial_plants.geojson
+│   └── vite.svg
+│
+├── src/                     # Application source code
+│   ├── assets/              # Static files (images, fonts, etc.)
+│   ├── components/          # Reusable React components
+│   │   ├── Filters.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── IndiaMap.jsx
+│   │   ├── MainPlatform.jsx
+│   │   ├── Report.jsx
+│   │   ├── TheChallenge.jsx
+│   │   └── TheSolution.jsx
+│   ├── pages/               # Main pages/views
+│   │   └── Preferences.jsx
+│   ├── utils/               # Utility/helper files
+│   │   └── overpass.js
+│   ├── App.jsx              # Main application component
+│   ├── index.css            # Global CSS styles
+│   └── main.jsx             # Application entry point
+│
+├── .gitignore               # Files/folders ignored by Git
+├── index.html               # Main HTML file
+├── package.json             # Project dependencies and scripts
+├── package-lock.json        # Locked dependency versions
+├── postcss.config.js        # PostCSS configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+├── vite.config.js           # Vite configuration
+└── README.md                # This file
+```
+
+---
+
+Getting Started
+
+To get the project up and running locally, follow these steps:
+
+1.Clone the repository
+```bash
+git clone https://github.com/vishakha-sharma21/h2Atlas-Hackout.git
+cd h2Atlas-Hackout
+```
+
+2.Install dependencies
+```bash
+npm install
+```
+
+3.Run the development server
+```bash
+npm run dev
+```
+
+4.Open in browser
+Navigate to [http://localhost:5173/](http://localhost:5173/) (or the port shown in your terminal).
+
+---
+
+##Key Technologies
+
+- **React** → JavaScript library for building UIs  
+- **Vite** → Fast front-end build tool  
+- **Tailwind CSS** → Utility-first CSS framework for rapid UI development  
+
+---
+
+##Authors
+
+- [Vishakha Sharma](https://github.com/vishakha-sharma21)  
+- Team: h2Atlas-Hackout  
+
+---
