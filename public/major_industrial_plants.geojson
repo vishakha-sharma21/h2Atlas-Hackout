@@ -1,0 +1,1545 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "0",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Reliance Refinery",
+        "gppd_idnr": "IN_R_001",
+        "capacity_mw": 250.0,
+        "latitude": 22.45,
+        "longitude": 70.07,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2015,
+        "owner": "Reliance",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.07,
+          22.45
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "IOC Panipat Refinery",
+        "gppd_idnr": "IN_R_002",
+        "capacity_mw": 200.0,
+        "latitude": 29.39,
+        "longitude": 76.97,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2012,
+        "owner": "IOC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.97,
+          29.39
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NTPC Trombay Power Plant",
+        "gppd_idnr": "IN_P_001",
+        "capacity_mw": 180.0,
+        "latitude": 19.07,
+        "longitude": 72.88,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2010,
+        "owner": "NTPC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88,
+          19.07
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Rashtriya Chemicals Fertilizer Thane",
+        "gppd_idnr": "IN_F_001",
+        "capacity_mw": 80.0,
+        "latitude": 19.2,
+        "longitude": 72.98,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2008,
+        "owner": "RCF",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.98,
+          19.2
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Tata Steel Jamshedpur",
+        "gppd_idnr": "IN_S_001",
+        "capacity_mw": 150.0,
+        "latitude": 22.8,
+        "longitude": 86.2,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2005,
+        "owner": "Tata Steel",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.2,
+          22.8
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Adani Hazira Power Plant",
+        "gppd_idnr": "IN_P_002",
+        "capacity_mw": 220.0,
+        "latitude": 21.15,
+        "longitude": 72.65,
+        "fuel1": "Natural Gas",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2014,
+        "owner": "Adani",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65,
+          21.15
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "BPCL Kochi Refinery",
+        "gppd_idnr": "IN_R_003",
+        "capacity_mw": 180.0,
+        "latitude": 10.05,
+        "longitude": 76.28,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2015,
+        "owner": "BPCL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28,
+          10.05
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Fertilizer Corporation of India Sindri",
+        "gppd_idnr": "IN_F_002",
+        "capacity_mw": 100.0,
+        "latitude": 23.69,
+        "longitude": 86.45,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1967,
+        "owner": "FCI",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.45,
+          23.69
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "JSW Steel Vijayanagar",
+        "gppd_idnr": "IN_S_002",
+        "capacity_mw": 200.0,
+        "latitude": 15.3,
+        "longitude": 76.6,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1997,
+        "owner": "JSW Steel",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6,
+          15.3
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Haldia Petrochemicals",
+        "gppd_idnr": "IN_C_001",
+        "capacity_mw": 120.0,
+        "latitude": 22.02,
+        "longitude": 88.12,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2001,
+        "owner": "HPL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.12,
+          22.02
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "GAIL Pata Petrochemical Complex",
+        "gppd_idnr": "IN_C_002",
+        "capacity_mw": 150.0,
+        "latitude": 26.9,
+        "longitude": 80.8,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2004,
+        "owner": "GAIL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.8,
+          26.9
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "FACT Cochin Division",
+        "gppd_idnr": "IN_F_003",
+        "capacity_mw": 90.0,
+        "latitude": 10.05,
+        "longitude": 76.29,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1995,
+        "owner": "FACT",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.29,
+          10.05
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NALCO Angul Smelter",
+        "gppd_idnr": "IN_S_003",
+        "capacity_mw": 100.0,
+        "latitude": 20.85,
+        "longitude": 85.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2008,
+        "owner": "NALCO",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1,
+          20.85
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "ONGC Hazira Gas Processing Plant",
+        "gppd_idnr": "IN_P_003",
+        "capacity_mw": 250.0,
+        "latitude": 21.17,
+        "longitude": 72.64,
+        "fuel1": "Natural Gas",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1987,
+        "owner": "ONGC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64,
+          21.17
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "IFFCO Paradeep Unit",
+        "gppd_idnr": "IN_F_004",
+        "capacity_mw": 180.0,
+        "latitude": 20.19,
+        "longitude": 86.63,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2000,
+        "owner": "IFFCO",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.63,
+          20.19
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "SAIL Bhilai Steel Plant",
+        "gppd_idnr": "IN_S_004",
+        "capacity_mw": 220.0,
+        "latitude": 21.2,
+        "longitude": 81.38,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1990,
+        "owner": "SAIL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.38,
+          21.2
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Indian Oil Guwahati Refinery",
+        "gppd_idnr": "IN_R_004",
+        "capacity_mw": 80.0,
+        "latitude": 26.15,
+        "longitude": 91.75,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1962,
+        "owner": "IOC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.75,
+          26.15
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NTPC Sipat Super Thermal Power Project",
+        "gppd_idnr": "IN_P_004",
+        "capacity_mw": 300.0,
+        "latitude": 22.1,
+        "longitude": 82.4,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2007,
+        "owner": "NTPC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.4,
+          22.1
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "GNFC Bharuch",
+        "gppd_idnr": "IN_F_005",
+        "capacity_mw": 120.0,
+        "latitude": 21.7,
+        "longitude": 72.95,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1980,
+        "owner": "GNFC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.95,
+          21.7
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Reliance Industries Patalganga",
+        "gppd_idnr": "IN_C_003",
+        "capacity_mw": 150.0,
+        "latitude": 18.91,
+        "longitude": 73.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1995,
+        "owner": "Reliance",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1,
+          18.91
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Hindustan Unilever Haridwar Plant",
+        "gppd_idnr": "IN_C_004",
+        "capacity_mw": 60.0,
+        "latitude": 29.96,
+        "longitude": 78.16,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2005,
+        "owner": "HUL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.16,
+          29.96
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "BPCL Bina Refinery",
+        "gppd_idnr": "IN_R_005",
+        "capacity_mw": 150.0,
+        "latitude": 24.1,
+        "longitude": 78.22,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2011,
+        "owner": "BPCL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.22,
+          24.1
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "SAIL Durgapur Steel Plant",
+        "gppd_idnr": "IN_S_005",
+        "capacity_mw": 180.0,
+        "latitude": 23.48,
+        "longitude": 87.2,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1970,
+        "owner": "SAIL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.2,
+          23.48
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NTPC Ramagundam Power Plant",
+        "gppd_idnr": "IN_P_005",
+        "capacity_mw": 250.0,
+        "latitude": 18.75,
+        "longitude": 79.5,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1999,
+        "owner": "NTPC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5,
+          18.75
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Madras Fertilizers Manali",
+        "gppd_idnr": "IN_F_006",
+        "capacity_mw": 100.0,
+        "latitude": 13.15,
+        "longitude": 80.25,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1971,
+        "owner": "MFL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.25,
+          13.15
+        ]
+      }
+    },
+    {
+      "id": "25",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "JSPL Angul Steel Plant",
+        "gppd_idnr": "IN_S_006",
+        "capacity_mw": 200.0,
+        "latitude": 21.05,
+        "longitude": 85.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2005,
+        "owner": "JSPL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1,
+          21.05
+        ]
+      }
+    },
+    {
+      "id": "26",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Nayara Energy Vadinar Refinery",
+        "gppd_idnr": "IN_R_006",
+        "capacity_mw": 250.0,
+        "latitude": 22.45,
+        "longitude": 69.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2006,
+        "owner": "Nayara Energy",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.1,
+          22.45
+        ]
+      }
+    },
+    {
+      "id": "27",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Mangalore Refinery and Petrochemicals",
+        "gppd_idnr": "IN_R_007",
+        "capacity_mw": 180.0,
+        "latitude": 12.91,
+        "longitude": 74.84,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1996,
+        "owner": "MRPL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.84,
+          12.91
+        ]
+      }
+    },
+    {
+      "id": "28",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Chennai Petroleum Corporation Manali",
+        "gppd_idnr": "IN_R_008",
+        "capacity_mw": 120.0,
+        "latitude": 13.15,
+        "longitude": 80.28,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1969,
+        "owner": "CPCL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.28,
+          13.15
+        ]
+      }
+    },
+    {
+      "id": "29",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Tuticorin Thermal Power Station",
+        "gppd_idnr": "IN_P_006",
+        "capacity_mw": 200.0,
+        "latitude": 8.78,
+        "longitude": 78.15,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1979,
+        "owner": "TANGEDCO",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.15,
+          8.78
+        ]
+      }
+    },
+    {
+      "id": "30",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Zuari Agro Chemicals Goa",
+        "gppd_idnr": "IN_F_007",
+        "capacity_mw": 90.0,
+        "latitude": 15.35,
+        "longitude": 73.88,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1975,
+        "owner": "Zuari Agro",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88,
+          15.35
+        ]
+      }
+    },
+    {
+      "id": "31",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Vedanta Lanjigarh Alumina Refinery",
+        "gppd_idnr": "IN_C_005",
+        "capacity_mw": 150.0,
+        "latitude": 19.98,
+        "longitude": 83.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2007,
+        "owner": "Vedanta",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1,
+          19.98
+        ]
+      }
+    },
+    {
+      "id": "32",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Hindustan Zinc Chanderiya Smelting",
+        "gppd_idnr": "IN_S_007",
+        "capacity_mw": 80.0,
+        "latitude": 24.88,
+        "longitude": 74.65,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1999,
+        "owner": "Hindustan Zinc",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.65,
+          24.88
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Reliance Industries Hazira",
+        "gppd_idnr": "IN_C_006",
+        "capacity_mw": 200.0,
+        "latitude": 21.15,
+        "longitude": 72.64,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1991,
+        "owner": "Reliance",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64,
+          21.15
+        ]
+      }
+    },
+    {
+      "id": "34",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Tata Steel Kalinganagar",
+        "gppd_idnr": "IN_S_008",
+        "capacity_mw": 250.0,
+        "latitude": 20.95,
+        "longitude": 86.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2016,
+        "owner": "Tata Steel",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.1,
+          20.95
+        ]
+      }
+    },
+    {
+      "id": "35",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NTPC Kaniha Thermal Power Station",
+        "gppd_idnr": "IN_P_007",
+        "capacity_mw": 350.0,
+        "latitude": 21.1,
+        "longitude": 85.1,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1995,
+        "owner": "NTPC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1,
+          21.1
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "National Fertilizers Panipat",
+        "gppd_idnr": "IN_F_008",
+        "capacity_mw": 120.0,
+        "latitude": 29.39,
+        "longitude": 76.97,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1979,
+        "owner": "NFL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.97,
+          29.39
+        ]
+      }
+    },
+    {
+      "id": "37",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "IOCL Paradip Refinery",
+        "gppd_idnr": "IN_R_009",
+        "capacity_mw": 250.0,
+        "latitude": 20.25,
+        "longitude": 86.6,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2015,
+        "owner": "IOC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.6,
+          20.25
+        ]
+      }
+    },
+    {
+      "id": "38",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Hindustan Petroleum Visakh Refinery",
+        "gppd_idnr": "IN_R_010",
+        "capacity_mw": 180.0,
+        "latitude": 17.7,
+        "longitude": 83.3,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1957,
+        "owner": "HPCL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3,
+          17.7
+        ]
+      }
+    },
+    {
+      "id": "39",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "SAIL Bokaro Steel Plant",
+        "gppd_idnr": "IN_S_009",
+        "capacity_mw": 200.0,
+        "latitude": 23.7,
+        "longitude": 86.15,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1978,
+        "owner": "SAIL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.15,
+          23.7
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "ONGC Hazira Petrochemical Plant",
+        "gppd_idnr": "IN_C_007",
+        "capacity_mw": 180.0,
+        "latitude": 21.17,
+        "longitude": 72.64,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1987,
+        "owner": "ONGC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64,
+          21.17
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Hindustan Petroleum Mumbai Refinery",
+        "gppd_idnr": "IN_R_011",
+        "capacity_mw": 150.0,
+        "latitude": 18.9,
+        "longitude": 72.85,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1954,
+        "owner": "HPCL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85,
+          18.9
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Essar Steel Hazira",
+        "gppd_idnr": "IN_S_010",
+        "capacity_mw": 220.0,
+        "latitude": 21.15,
+        "longitude": 72.65,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1992,
+        "owner": "AM/NS India",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65,
+          21.15
+        ]
+      }
+    },
+    {
+      "id": "43",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "IOCL Mathura Refinery",
+        "gppd_idnr": "IN_R_012",
+        "capacity_mw": 200.0,
+        "latitude": 27.48,
+        "longitude": 77.68,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1982,
+        "owner": "IOC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.68,
+          27.48
+        ]
+      }
+    },
+    {
+      "id": "44",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Gujarat Alkalies and Chemicals Dahej",
+        "gppd_idnr": "IN_C_008",
+        "capacity_mw": 90.0,
+        "latitude": 21.75,
+        "longitude": 72.65,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2000,
+        "owner": "GACL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65,
+          21.75
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Tata Power Mundra Power Plant",
+        "gppd_idnr": "IN_P_008",
+        "capacity_mw": 400.0,
+        "latitude": 22.8,
+        "longitude": 69.5,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2010,
+        "owner": "Tata Power",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.5,
+          22.8
+        ]
+      }
+    },
+    {
+      "id": "46",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "GAIL Vijaipur Petrochemical Plant",
+        "gppd_idnr": "IN_C_009",
+        "capacity_mw": 150.0,
+        "latitude": 24.8,
+        "longitude": 77.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2009,
+        "owner": "GAIL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1,
+          24.8
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Indian Oil Panipat Petrochemicals",
+        "gppd_idnr": "IN_C_010",
+        "capacity_mw": 100.0,
+        "latitude": 29.39,
+        "longitude": 76.97,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2007,
+        "owner": "IOC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.97,
+          29.39
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Adani Mundra Power Plant",
+        "gppd_idnr": "IN_P_009",
+        "capacity_mw": 500.0,
+        "latitude": 22.85,
+        "longitude": 69.6,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2013,
+        "owner": "Adani",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.6,
+          22.85
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "Ambuja Cement Ambuja Nagar",
+        "gppd_idnr": "IN_C_011",
+        "capacity_mw": 150.0,
+        "latitude": 21.32,
+        "longitude": 71.21,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1986,
+        "owner": "Ambuja Cement",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.21,
+          21.32
+        ]
+      }
+    },
+    {
+      "id": "50",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "National Fertilizers Vijaipur",
+        "gppd_idnr": "IN_F_009",
+        "capacity_mw": 120.0,
+        "latitude": 24.8,
+        "longitude": 77.1,
+        "fuel1": "Hydrogen",
+        "fuel2": "Natural Gas",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1984,
+        "owner": "NFL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1,
+          24.8
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "JSW Steel Dolvi",
+        "gppd_idnr": "IN_S_011",
+        "capacity_mw": 180.0,
+        "latitude": 18.67,
+        "longitude": 73.18,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 2005,
+        "owner": "JSW Steel",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.18,
+          18.67
+        ]
+      }
+    },
+    {
+      "id": "52",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "JSPL Raigarh Steel Plant",
+        "gppd_idnr": "IN_S_012",
+        "capacity_mw": 200.0,
+        "latitude": 21.9,
+        "longitude": 83.3,
+        "fuel1": "Hydrogen",
+        "fuel2": "Coal",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1995,
+        "owner": "JSPL",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.3,
+          21.9
+        ]
+      }
+    },
+    {
+      "id": "53",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NTPC Korba Super Thermal Power Plant",
+        "gppd_idnr": "IN_P_010",
+        "capacity_mw": 250.0,
+        "latitude": 22.3,
+        "longitude": 82.7,
+        "fuel1": "Coal",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1990,
+        "owner": "NTPC",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.7,
+          22.3
+        ]
+      }
+    },
+    {
+      "id": "54",
+      "type": "Feature",
+      "properties": {
+        "country": "IN",
+        "country_long": "India",
+        "name": "NLC India Thermal Power Station",
+        "gppd_idnr": "IN_P_011",
+        "capacity_mw": 150.0,
+        "latitude": 11.5,
+        "longitude": 79.5,
+        "fuel1": "Lignite",
+        "fuel2": "Hydrogen",
+        "fuel3": null,
+        "fuel4": null,
+        "commissioning_year": 1962,
+        "owner": "NLC India",
+        "source": "synthetic",
+        "url": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5,
+          11.5
+        ]
+      }
+    }
+  ]
+}
