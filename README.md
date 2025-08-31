@@ -2,7 +2,7 @@
 
 H2Atlas-Hackout is an interactive map-based platform designed to support the planning and analysis of hydrogen infrastructure across India. The platform integrates multiple datasets, allowing users to evaluate optimal locations for hydrogen plants, assess nearby renewable energy sources, industrial demand points, and transportation options, all in a visually intuitive interface.
 
-🌐 **Live Demo:** [https://h2atlas-hackout.vercel.app](https://h2atlas-hackout.vercel.app)
+🌐 **Live Demo:** https://h2atlas.vercel.app
 
 ---
 
