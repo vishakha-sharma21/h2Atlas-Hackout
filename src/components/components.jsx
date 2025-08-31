@@ -116,8 +116,11 @@ export default function Preferences() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const payload = { state: stateVal === 'All India' ? '' : stateVal, modes };
-    localStorage.setItem('h2_filters', JSON.stringify(payload));
+    const payload = { state: stateVal === 'All India' ? '' : stateVal, modes, visibleLayers };
+    try {
+      localStorage.setItem('h2_filters', JSON.stringify(payload));
+      localStorage.setItem('h2_filters_saved_at', new Date().toISOString());
+    } catch {}
     // Stay on the same page (no redirect)
   };
 
@@ -225,15 +228,6 @@ export default function Preferences() {
     try { localStorage.setItem('h2_filters', JSON.stringify(payload)); } catch {}
   }, [stateVal, modes]);
 
-  const onViewReport = () => {
-    saveFilters();
-    navigate('/report');
-  };
-
-  const onDownloadPDF = () => {
-    saveFilters();
-    navigate('/report?print=1');
-  };
 
   const onClear = () => { setStateVal('All India'); setModes([]); };
   const toggleStat = (id, checked) => {
@@ -271,13 +265,16 @@ export default function Preferences() {
 
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
-      <header className="sticky top-0 z-[1100] bg-[#1A202C] text-white shadow-md">
+      <header className="sticky top-0 z-[1100] bg-[#6495ED] text-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#4A90E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L12 10.75M12 10.75L14.25 17M12 10.75V3M21 12c0-4.97-4.03-9-9-9S3 7.03 3 12s4.03 9 9 9 9-4.03 9-9z"/></svg>
             <span className="font-bold">H2Atlas</span>
           </div>
-          <button onClick={()=>navigate('/')} className="bg-gray-700 hover:bg-gray-800 text-gray-200 text-sm px-4 py-2 rounded-md transition-colors">Back to Home</button>
+          <div className="flex items-center gap-3">
+            <button onClick={()=>navigate('/')} className="bg-gray-700 hover:bg-gray-800 text-gray-200 text-sm px-4 py-2 rounded-md transition-colors">Back to Home</button>
+            <button onClick={()=>navigate('/predict')} className="bg-[#4A90E2] hover:bg-[#3A7EDC] text-white text-sm px-4 py-2 rounded-md transition-colors">Solar/Wind Plant Predict</button>
+          </div>
         </div>
       </header>
 
@@ -376,17 +373,13 @@ export default function Preferences() {
               <button type="submit" className="px-5 py-2 rounded-md bg-[#4A90E2] hover:bg-[#3A7EDC] text-white font-medium shadow">Save & Continue</button>
             </div>
 
-            {/* Report/Document actions moved here */}
-            <div className="pt-4 border-t border-gray-200 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-end">
-              <button type="button" onClick={onViewReport} className="px-5 py-2 rounded-md bg-[#4A90E2] hover:bg-[#3A7EDC] text-white font-medium shadow">View Document</button>
-              <button type="button" onClick={onDownloadPDF} className="px-5 py-2 rounded-md bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-medium shadow">Download PDF</button>
-            </div>
+            {/* Info line moved directly below Save & Continue */}
+            <p className="text-sm text-gray-600 mt-3">Changes apply immediately to the map. Saving keeps your choices for later.</p>
 
-            {/* Predict entry point at bottom */}
-            <div className="pt-4 border-t border-gray-200 flex items-center justify-between">
-              <div className="text-sm text-gray-600">Changes apply immediately to the map. Saving keeps your choices for later.</div>
-              <button type="button" onClick={()=>navigate('/predict')} className="px-5 py-2 rounded-md bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-medium shadow">Open Predict</button>
-            </div>
+            {/* Report/Document actions moved here */}
+            {/* Report/Document actions removed as per new design; now accessible from Site Selection (Generate Report). */}
+
+            {/* Predict entry point removed (now in navbar) */}
           </form>
         </div>
       </main>

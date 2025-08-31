@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white shadow-md"> {/* Blue gradient header */}
+    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 bg-[#6495ED] text-white shadow-md"> {/* Brand header */}
       <div className="flex items-center space-x-3">
         <div className="h-12 w-12 md:h-14 md:w-14 bg-white rounded-full p-1 flex items-center justify-center shadow-sm">
           <img src="/favicon.svg" alt="H2Atlas logo" className="h-10 w-10 md:h-12 md:w-12 object-contain" />
@@ -22,7 +22,7 @@ const Header = () => {
         <a href="#" className="hover:text-white">Auth</a>
       </nav> */}
       <div className="flex items-center space-x-4">
-        <Link to="/about" className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md shadow transition-colors">About Us</Link>
+        <Link to="/about" className="hidden md:block bg-[#6495ED] hover:bg-[#6495ED] text-white text-sm px-4 py-2 rounded-md shadow transition-colors">About Us</Link>
       </div>
     </header>
   );

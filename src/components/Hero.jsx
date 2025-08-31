@@ -3,14 +3,15 @@ import { Eye, BarChart2, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
 
 const Hero = () => {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-      const q = gsap.utils.selector(heroRef);
+    const ctx = gsap.context((self) => {
+      gsap.registerPlugin(ScrollTrigger, TextPlugin);
+      const q = self.selector;
 
       // Heading slide-in
       gsap.from(q('.hero-title'), {
@@ -68,6 +69,26 @@ const Hero = () => {
         scrollTrigger: { trigger: heroRef.current, start: 'top 85%', toggleActions: 'restart none none reset', invalidateOnRefresh: true }
       });
 
+      // Typewriter for hero title (multi-line)
+      const lines = q('.hero-title .tw-line');
+      const initLines = () => {
+        lines.forEach((el) => {
+          const full = el.getAttribute('data-text') || '';
+          el.textContent = '';
+          el.classList.remove('typing');
+          // store full text for reuse
+          el.dataset.full = full;
+        });
+      };
+
+      initLines();
+      const tl = gsap.timeline();
+      lines.forEach((el) => {
+        tl.add(() => el.classList.add('typing'))
+          .to(el, { duration: Math.max((el.dataset.full?.length || 1) * 0.04, 0.4), ease: 'none', text: { value: el.dataset.full || '' } })
+          .add(() => el.classList.remove('typing'));
+      });
+
       // Magnetic buttons
       const magnets = q('.magnet');
       const removeFns = [];
@@ -87,7 +108,7 @@ const Hero = () => {
         });
       });
       // store cleanup on the context so revert will call it
-      ctx.add(() => removeFns.forEach((fn) => fn()));
+      self.add(() => removeFns.forEach((fn) => fn()));
     }, heroRef);
     return () => ctx.revert();
   }, []);
@@ -96,13 +117,13 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <h1 className="hero-title text-4xl lg:text-6xl font-bold leading-tight">
-            Navigate the Green
+            <span className="tw-line" data-text="Navigate the Green"></span>
             <br />
-            Hydrogen Economy with
+            <span className="tw-line" data-text="Hydrogen Economy"></span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-              Precision
-            </span>
+            <span className="tw-line" data-text="with"></span>
+            <br />
+            <span className="tw-line caret-primary bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent" data-text="Precision"></span>
           </h1>
           <p className="hero-subtext reveal-words mt-4 text-lg text-gray-600">
             Real-time intelligence for hydrogen infrastructure planning, investment decisions, and market positioning.
@@ -113,7 +134,11 @@ const Hero = () => {
               <span className="arrow ml-2">→</span>
             </Link>
             <Link to="/predict" className="btn-sweep btn-ghost magnet inline-flex items-center font-semibold py-3 px-6 rounded-xl border">
-              <span className="label">Predict</span>
+              <span className="label">Predict solar/<br></br>wind plant</span>
+              <span className="arrow ml-2">→</span>
+            </Link>
+            <Link to="/predictdata" className="btn-sweep btn-ghost magnet inline-flex items-center font-semibold py-3 px-6 rounded-xl border">
+              <span className="label">Predict Your<br></br> Hydrogen Plant</span>
               <span className="arrow ml-2">→</span>
             </Link>
           </div>

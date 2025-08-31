@@ -37,7 +37,7 @@ export default function Filters({ value, onChange }) {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Region (State/UT)</label>
               <select
-                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6495ED]"
                 value={selectedState || 'All India'}
                 onChange={updateState}
               >

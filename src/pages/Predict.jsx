@@ -53,11 +53,13 @@ export default function Predict() {
 
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
-      <header className="sticky top-0 z-[1100] bg-[#1A202C] text-white shadow-md">
+      <header className="sticky top-0 z-[1100] bg-[#6495ED] text-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#4A90E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L12 10.75M12 10.75L14.25 17M12 10.75V3M21 12c0-4.97-4.03-9-9-9S3 7.03 3 12s4.03 9 9 9 9-4.03 9-9z"/></svg>
-            <span className="font-bold">Predict</span>
+          <div className="flex items-center space-x-3">
+            <div className="h-12 w-12 md:h-14 md:w-14 bg-white rounded-full p-1 flex items-center justify-center shadow-sm">
+              <img src="/favicon.svg" alt="H2Atlas logo" className="h-10 w-10 md:h-12 md:w-12 object-contain" />
+            </div>
+            <span className="font-bold text-base md:text-xl">Solar/Wind Plant Predict</span>
           </div>
           <div className="flex gap-2">
             <button onClick={()=>navigate('/preferences')} className="bg-gray-700 hover:bg-gray-800 text-gray-200 text-sm px-4 py-2 rounded-md transition-colors">Preferences</button>

@@ -51,7 +51,7 @@ export default function Preferences() {
 
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
-      <header className="sticky top-0 z-40 bg-[#1A202C] text-white shadow-md">
+      <header className="sticky top-0 z-40 bg-[#6495ED] text-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#4A90E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L12 10.75M12 10.75L14.25 17M12 10.75V3M21 12c0-4.97-4.03-9-9-9S3 7.03 3 12s4.03 9 9 9 9-4.03 9-9z"/></svg>
